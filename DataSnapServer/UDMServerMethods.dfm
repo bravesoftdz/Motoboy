@@ -25,7 +25,7 @@ object DMServerMethods: TDMServerMethods
   end
   object FDTransaction: TFDTransaction
     Connection = FDConexao
-    Left = 224
-    Top = 256
+    Left = 88
+    Top = 80
   end
 end

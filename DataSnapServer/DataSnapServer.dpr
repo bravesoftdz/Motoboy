@@ -9,7 +9,8 @@ uses
   IdHTTPWebBrokerBridge,
   UPrincipal in 'UPrincipal.pas' {FPrincipal},
   UDMServerMethods in 'UDMServerMethods.pas' {DMServerMethods: TDSServerModule},
-  WebModuleUnit1 in 'WebModuleUnit1.pas' {WebModule1: TWebModule};
+  WebModuleUnit1 in 'WebModuleUnit1.pas' {WebModule1: TWebModule},
+  ULib in '..\Lib\ULib.pas';
 
 {$R *.res}
 
