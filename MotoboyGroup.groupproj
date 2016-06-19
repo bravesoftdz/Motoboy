@@ -6,10 +6,10 @@
         <Projects Include="Desktop\Motoboy.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Android\AppMotoboy.dproj">
+        <Projects Include="DataSnapServer\DataSnapServer.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="DataSnapServer\DataSnapServer.dproj">
+        <Projects Include="Android\MotoboyApp.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -29,15 +29,6 @@
     <Target Name="Motoboy:Make">
         <MSBuild Projects="Desktop\Motoboy.dproj" Targets="Make"/>
     </Target>
-    <Target Name="AppMotoboy">
-        <MSBuild Projects="Android\AppMotoboy.dproj"/>
-    </Target>
-    <Target Name="AppMotoboy:Clean">
-        <MSBuild Projects="Android\AppMotoboy.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="AppMotoboy:Make">
-        <MSBuild Projects="Android\AppMotoboy.dproj" Targets="Make"/>
-    </Target>
     <Target Name="DataSnapServer">
         <MSBuild Projects="DataSnapServer\DataSnapServer.dproj"/>
     </Target>
@@ -47,14 +38,23 @@
     <Target Name="DataSnapServer:Make">
         <MSBuild Projects="DataSnapServer\DataSnapServer.dproj" Targets="Make"/>
     </Target>
+    <Target Name="MotoboyApp">
+        <MSBuild Projects="Android\MotoboyApp.dproj"/>
+    </Target>
+    <Target Name="MotoboyApp:Clean">
+        <MSBuild Projects="Android\MotoboyApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MotoboyApp:Make">
+        <MSBuild Projects="Android\MotoboyApp.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Motoboy;AppMotoboy;DataSnapServer"/>
+        <CallTarget Targets="Motoboy;DataSnapServer;MotoboyApp"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Motoboy:Clean;AppMotoboy:Clean;DataSnapServer:Clean"/>
+        <CallTarget Targets="Motoboy:Clean;DataSnapServer:Clean;MotoboyApp:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Motoboy:Make;AppMotoboy:Make;DataSnapServer:Make"/>
+        <CallTarget Targets="Motoboy:Make;DataSnapServer:Make;MotoboyApp:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

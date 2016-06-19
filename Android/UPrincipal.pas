@@ -4,11 +4,10 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts;
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs;
 
 type
-  TForm3 = class(TForm)
-    Layout1: TLayout;
+  TForm2 = class(TForm)
   private
     { Private declarations }
   public
@@ -16,7 +15,7 @@ type
   end;
 
 var
-  Form3: TForm3;
+  Form2: TForm2;
 
 implementation
 
