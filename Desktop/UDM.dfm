@@ -30,7 +30,7 @@ object DM: TDM
   end
   object SQLGeral: TFDQuery
     Connection = FDConexao
-    Left = 96
-    Top = 112
+    Left = 32
+    Top = 120
   end
 end

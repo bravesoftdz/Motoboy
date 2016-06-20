@@ -7,12 +7,13 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
 
 type
-  TForm1 = class(TForm)
+  TFPrincipal = class(TForm)
     MainMenu: TMainMenu;
-    Cadastros1: TMenuItem;
-    Movimentao1: TMenuItem;
-    Cliente1: TMenuItem;
-    Motoboy1: TMenuItem;
+    MICadastros: TMenuItem;
+    MIMovimentacao: TMenuItem;
+    MICliente: TMenuItem;
+    MIMotoboy: TMenuItem;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -20,10 +21,15 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FPrincipal: TFPrincipal;
 
 implementation
 
 {$R *.dfm}
+
+procedure TFPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Application.Terminate;
+end;
 
 end.

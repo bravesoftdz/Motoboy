@@ -4,7 +4,7 @@ interface
 
 Uses
   Winapi.WinInet, System.Win.Registry, IdGlobal, IdHash, IdHashMessageDigest,
-  Winapi.Windows, System.SysUtils, FireDAC.Comp.Client;
+  Winapi.Windows, System.SysUtils, FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Forms;
 
 const
   C1 = 58693;
@@ -40,6 +40,8 @@ Type
       function SalvarChave(Chave: String): String;
       procedure ExecutarSQL(sSQL: String; Query: TFDQuery);
       function ExibirValor(Valor: Real; CasasDecimais: Integer = 2): String;
+
+      Function VerificaBranco(Campo: TEdit; DescricaoCampo: String; Valor: String = ''): Boolean;
 end;
 
 implementation
@@ -279,6 +281,16 @@ begin
     Y:= '0';
   Result:= Y;
 
+end;
+
+function TLibUtils.VerificaBranco(Campo: TEdit; DescricaoCampo: String; Valor: String = ''): Boolean;
+begin
+  if (Trim(Campo.Text) = Valor) then
+  begin
+    Application.MessageBox(pWideChar('É necessário preencher o campo ' + QuotedStr(DescricaoCampo) + ' para continuar.'), PWideChar(DescricaoCampo), MB_ICONEXCLAMATION + MB_OK);
+    if (Campo.CanFocus) then
+      Campo.SetFocus;
+  end;
 end;
 
 function TLibUtils.WindowsVersion: string;

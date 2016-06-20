@@ -1,9 +1,9 @@
-object Form1: TForm1
+object FPrincipal: TFPrincipal
   Left = 0
   Top = 0
   Caption = 'Sistema de Motoboy'
-  ClientHeight = 401
-  ClientWidth = 712
+  ClientHeight = 431
+  ClientWidth = 681
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,21 +12,24 @@ object Form1: TForm1
   Font.Style = []
   Menu = MainMenu
   OldCreateOrder = False
+  Position = poScreenCenter
+  WindowState = wsMaximized
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object MainMenu: TMainMenu
     Left = 40
     Top = 56
-    object Cadastros1: TMenuItem
+    object MICadastros: TMenuItem
       Caption = 'Cadastros'
-      object Cliente1: TMenuItem
+      object MICliente: TMenuItem
         Caption = 'Cliente'
       end
-      object Motoboy1: TMenuItem
+      object MIMotoboy: TMenuItem
         Caption = 'Motoboy'
       end
     end
-    object Movimentao1: TMenuItem
+    object MIMovimentacao: TMenuItem
       Caption = 'Movimenta'#231#227'o'
     end
   end

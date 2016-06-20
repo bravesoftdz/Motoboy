@@ -33,6 +33,8 @@ implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
+uses ULogin;
+
 {$R *.dfm}
 
 procedure TDM.DataModuleCreate(Sender: TObject);
