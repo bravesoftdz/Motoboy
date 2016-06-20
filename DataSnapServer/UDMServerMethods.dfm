@@ -4,12 +4,12 @@ object DMServerMethods: TDMServerMethods
   Width = 373
   object FDConexao: TFDConnection
     Params.Strings = (
-      'Database=C:\Anexar_Anexo\DBANEXAR_ANEXO.FDB'
+      'Database=D:\Projetos\Motoboy\Database\MOTOBOY.FDB'
       'User_Name=SYSDBA'
       'Password=masterkey'
       'OSAuthent=No'
       'Protocol=TCPIP'
-      'Server=chucknorris'
+      'Server=127.0.0.1'
       'Port=3050'
       'CharacterSet=WIN1252'
       'DriverID=FB')
@@ -25,7 +25,7 @@ object DMServerMethods: TDMServerMethods
   end
   object FDTransaction: TFDTransaction
     Connection = FDConexao
-    Left = 88
-    Top = 80
+    Left = 32
+    Top = 64
   end
 end

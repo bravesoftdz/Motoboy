@@ -18,6 +18,7 @@ begin
   if WebRequestHandler <> nil then
     WebRequestHandler.WebModuleClass := WebModuleClass;
   Application.Initialize;
+  Application.CreateForm(TDMServerMethods, DMServerMethods);
   Application.CreateForm(TFPrincipal, FPrincipal);
   Application.Run;
 end.
